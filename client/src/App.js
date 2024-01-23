@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="container bg-primary-subtle rounded p-2">
       <div className="h1 text-center w-100">Todo App</div>
-      <InputForm setTodos={setTodos} />
+      <InputForm setTodos={setTodos} todos={todos}/>
       {totalAmount > 0 && (
         <>
           <ProgressBar todos={todos} />

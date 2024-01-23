@@ -2,14 +2,14 @@ import { memo, useState } from "react";
 import { uid } from "uid";
 import axios from "axios";
 
-export default memo(function InputForm({ setTodos }) {
+export default memo(function InputForm({ setTodos, todos }) {
   const [title, setTitle] = useState("");
   const [error, setError] = useState(null);
   const [uploading, setUploading] = useState(false);
 
   return (
     <>
-      <div className={`input-group${uploading ? " disabled" : ""}`}>
+      <div className={`input-group${uploading || !todos ? " disabled" : ""}`}>
         <input
           onChange={(e) => {
             setError(null);
