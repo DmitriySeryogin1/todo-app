@@ -1,0 +1,5 @@
+.disabled {
+    opacity: 25%;
+    pointer-events: none;
+    touch-action: none;
+}
